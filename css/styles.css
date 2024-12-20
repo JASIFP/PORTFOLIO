@@ -4238,3 +4238,31 @@ img.u-pull-left {
         right : 6vw;
     }
 }
+.folio-list__item * {
+    display: block !important; /* Make sure all child elements are visible */
+    visibility: visible !important;
+}
+/* Ensure items stack on smaller screens */
+@media (max-width: 768px) {
+    .folio-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Add spacing between items */
+    }
+
+    .folio-list__item {
+        width: 100%; /* Make each item take up full width */
+        text-align: center; /* Center align the content */
+    }
+
+    .folio-list__item-pic img {
+        width: 100%; /* Ensure images resize to fit */
+        height: auto;
+    }
+
+    .folio-list__item-text {
+        margin-top: 10px; /* Add space between image and text */
+        font-size: 16px; /* Adjust font size for readability */
+    }
+}
