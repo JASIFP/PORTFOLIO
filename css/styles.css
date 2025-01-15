@@ -2093,16 +2093,16 @@ button.btn--small {
 
 .btn--medium,
 button.btn--medium {
-    --btn-height: calc(var(--vspace-btn) + .8rem);
-    display: inline-block; /* Ensure block styling */
-    padding: 0.5rem 1rem;  /* Adjust inner spacing */
-    text-align: center;    /* Center text */
-    width: 100%;           /* Ensure full width within parent */
-    box-sizing: border-box; /* Include padding in dimensions */
-    white-space: normal;   /* Allow text wrapping */
-    overflow-wrap: break-word; /* Prevent text spill */
+    --btn-height: calc(var(--vspace-btn) + 0.8rem);
+    display: inline-block; /* Ensures it behaves like a block element */
+    padding: 0.5rem 1rem;  /* Adds spacing inside the button */
+    text-align: center;    /* Centers the text horizontally */
+    width: 100%;           /* Spans full width */
+    box-sizing: border-box; /* Ensures padding is included in width */
+    white-space: normal;   /* Allows text wrapping */
+    word-break: break-word; /* Ensures long words break to fit */
+    overflow: hidden;      /* Hides any accidental overflow */
 }
-
 .btn--large,
 button.btn--large {
     --btn-height : calc(var(--vspace-btn) + 1.6rem);
