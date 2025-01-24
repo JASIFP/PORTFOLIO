@@ -4034,7 +4034,93 @@ img.u-pull-left {
     .modal-popup__desc {
         padding : 0 var(--vspace-1) var(--vspace-0_25);
     }
+}    
+    /* Target devices with widths between 344px and 390px */
+@media screen and (max-width: 390px) and (min-width: 344px) {
+    .folio-list .column {
+        flex: none;
+        width: 100%; /* Make items take up full width */
+    }
+
+    .folio-list__item {
+        margin-bottom: var(--vspace-0_5); /* Adjust spacing between items */
+    }
+
+    .folio-list__item-link {
+        padding-left: var(--space); /* Reduce padding for better fit */
+    }
+
+    .folio-list__item-pic img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ensures images look good */
+    }
+
+    .folio-list__item-title {
+        font-size: var(--text-sm); /* Reduce font size slightly */
+        line-height: var(--vspace-1);
+    }
+
+    .folio-list__item-cat {
+        font-size: var(--text-xs); /* Adjust category font size */
+    }
+
+    .folio-list__proj-link {
+        right: 0; /* Ensure the link is visible */
+        font-size: var(--text-xs); /* Adjust link font size */
+    }
+
+    .modal-popup__desc {
+        padding: var(--vspace-0_5);
+    }    
 }
+@media screen and (max-width: 390px) and (min-height: 844px) and (max-height: 844px) {
+    .folio-list .column {
+        flex: none;
+        width: 100%; /* Ensure items take up full width */
+    }
+
+    .folio-list__item {
+        margin-bottom: var(--vspace-0_5); /* Adjust spacing for better alignment */
+    }
+
+    .folio-list__item-link {
+        padding-left: var(--space); /* Adjust padding for better fit */
+    }
+
+    .folio-list__item-pic img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ensure images look proportional */
+    }
+
+    .folio-list__item-title {
+        font-size: var(--text-sm); /* Reduce font size slightly */
+        line-height: var(--vspace-0_875); /* Match text spacing */
+    }
+
+    .folio-list__item-cat {
+        font-size: var(--text-xs); /* Keep category font size compact */
+    }
+
+    .folio-list__proj-link {
+        right: var(--vspace-0_5); /* Adjust link position */
+        font-size: var(--text-xs); /* Ensure the link remains readable */
+    }
+
+    .modal-popup__desc {
+        padding: var(--vspace-0_5); /* Compact padding inside modals */
+    }
+
+    .s-works {
+        padding-top: var(--vspace-2_5); /* Adjust top padding */
+        padding-bottom: var(--vspace-2); /* Adjust bottom padding */
+    }
+}
+
+
 
 
 
@@ -4245,37 +4331,4 @@ img.u-pull-left {
         right : 6vw;
     }
 }
-.folio-list__item * {
-    display: block !important; /* Make sure all child elements are visible */
-    visibility: visible !important;
-}
-/* Ensure items stack on smaller screens */
-@media (max-width: 768px) {
-    .folio-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px; /* Add spacing between items */
-    }
 
-    .folio-list__item {
-        width: 100%; /* Make each item take up full width */
-        text-align: center; /* Center align the content */
-    }
-
-    .folio-list__item-pic img {
-        width: 100%; /* Ensure images resize to fit */
-        height: auto;
-    }
-
-    .folio-list__item-text {
-        margin-top: 10px; /* Add space between image and text */
-        font-size: 16px; /* Adjust font size for readability */
-    }
-    .responsive-img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-    }
-    
-}
