@@ -24,6 +24,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <style>
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+    </style>
+
 
 </head>
 
@@ -462,16 +468,19 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const hash = window.location.hash; // Get the hash from the URL
+        window.onload = function () {
+            const hash = window.location.hash;
             if (hash) {
-                const target = document.querySelector(hash); // Find the element with the ID
+                const target = document.querySelector(hash);
                 if (target) {
-                    target.scrollIntoView({ behavior: "smooth", block: "start" }); // Scroll smoothly
+                    setTimeout(() => {
+                        target.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }, 100); // Slight delay to ensure the page has loaded
                 }
             }
-        });
+        };
     </script>
+
     <script>
         window.onload = function () {
             const hash = window.location.hash;
