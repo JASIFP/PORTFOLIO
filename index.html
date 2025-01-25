@@ -468,29 +468,22 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script>
-        window.onload = function () {
+        document.addEventListener("DOMContentLoaded", function () {
             const hash = window.location.hash;
             if (hash) {
                 const target = document.querySelector(hash);
                 if (target) {
+                    // Use a timeout to ensure the DOM is fully rendered before scrolling
                     setTimeout(() => {
-                        target.scrollIntoView({ behavior: "smooth", block: "start" });
-                    }, 100); // Slight delay to ensure the page has loaded
+                        window.scrollTo({
+                            top: target.offsetTop,
+                            behavior: "smooth",
+                        });
+                    }, 200);
                 }
             }
-        };
+        });
     </script>
-
-    <script>
-        window.onload = function () {
-            const hash = window.location.hash;
-            if (hash) {
-                location.href = hash; // Force the browser to jump to the section
-            }
-        };
-    </script>
-
-
 
 </body>
 </html>
