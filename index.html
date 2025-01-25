@@ -462,5 +462,15 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
+     <!-- Add the JavaScript code just before the closing body tag -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hash = window.location.hash;
+            if (hash && document.querySelector(hash)) {
+                document.querySelector(hash).scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    </script>
+
 </body>
 </html>
