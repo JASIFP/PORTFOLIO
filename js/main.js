@@ -68,29 +68,38 @@
 
 
    /* Preloader
-    * -------------------------------------------------- */
-    const ssPreloader = function() {
-
+ * -------------------------------------------------- */
+    const ssPreloader = function () {
         const preloader = document.querySelector('#preloader');
         if (!preloader) return;
-        
-        window.addEventListener('load', function() {
+
+        window.addEventListener('load', function () {
             document.querySelector('html').classList.remove('ss-preload');
             document.querySelector('html').classList.add('ss-loaded');
 
-            document.querySelectorAll('.ss-animated').forEach(function(item){
+            document.querySelectorAll('.ss-animated').forEach(function (item) {
                 item.classList.remove('ss-animated');
             });
 
-            tl.play();
-        });
+        // Ensure preloader doesn't block the hash scroll
+        if (window.location.hash) {
+            const sectionId = window.location.hash;
+            const section = document.querySelector(sectionId);
+            if (section) {
+                // Use smooth scroll if desired, or remove `behavior` for instant jump
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }
 
-        // force page scroll position to top at page refresh
-        // window.addEventListener('beforeunload' , function () {
-        //     // window.scrollTo(0, 0);
-        // });
+        tl.play();
+    });
 
-    }; // end ssPreloader
+    // Optional: Force page scroll to top at page refresh (uncomment if needed)
+    // window.addEventListener('beforeunload', function () {
+    //     window.scrollTo(0, 0);
+    // });
+}; // end ssPreloader
+
 
 
    /* Mobile Menu
