@@ -337,7 +337,15 @@
                 return c/2*(t*t*t + 2) + b;
             }
         }
-
+    window.addEventListener("DOMContentLoaded", function () {
+        if (window.location.hash) {
+            const sectionId = window.location.hash;
+            const section = document.querySelector(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    });
         const triggers = document.querySelectorAll('.smoothscroll');
         
         const moveTo = new MoveTo({
@@ -357,7 +365,6 @@
    /* Initialize
     * ------------------------------------------------------ */
     (function ssInit() {
-
         ssPreloader();
         ssMobileMenu();
         ssScrollSpy();
@@ -366,7 +373,6 @@
         ssLightbox();
         ssAlertBoxes();
         ssMoveTo();
-
     })();
 
 })(document.documentElement);
