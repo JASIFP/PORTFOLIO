@@ -81,24 +81,23 @@
                 item.classList.remove('ss-animated');
             });
 
-        // Ensure preloader doesn't block the hash scroll
-        if (window.location.hash) {
-            const sectionId = window.location.hash;
-            const section = document.querySelector(sectionId);
-            if (section) {
-                // Use smooth scroll if desired, or remove `behavior` for instant jump
-                section.scrollIntoView({ behavior: "smooth" });
+            // Ensure preloader doesn't block the hash scroll
+            tl.play(); // Play the timeline animation
+
+            // Handle hash navigation after preloader
+            if (window.location.hash) {
+                const sectionId = window.location.hash;
+                const section = document.querySelector(sectionId);
+                if (section) {
+                    // Use a timeout to ensure animations are complete
+                    setTimeout(() => {
+                        section.scrollIntoView({ behavior: "smooth" });
+                    }, 800); // Adjust delay based on preloader timing
+                }
             }
-        }
+        });
+    };
 
-        tl.play();
-    });
-
-    // Optional: Force page scroll to top at page refresh (uncomment if needed)
-    // window.addEventListener('beforeunload', function () {
-    //     window.scrollTo(0, 0);
-    // });
-}; // end ssPreloader
 
 
 
