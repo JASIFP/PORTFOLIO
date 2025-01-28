@@ -4334,4 +4334,24 @@ img.u-pull-left {
         right : 6vw;
     }
 }
+/* ------------------------------------------------------------------- 
+ * SUBPAGE IMAGE GAP:
+ * WORKS SHOW NO GAPING
+ * ------------------------------------------------------------------- */
+.image-showcase {
+    display: flex;
+    flex-direction: column; /* Ensures vertical stacking */
+    gap: 0; /* Removes gaps between flex items */
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default padding */
+}
+
+.image-showcase img {
+    display: block; /* Ensures images behave predictably */
+    width: 100%; /* Optional: Makes images responsive */
+    margin: 0; /* Removes default margin around images */
+    padding: 0; /* Removes default padding */
+    border: 0; /* Removes any default border */
+}
+
 
