@@ -4357,6 +4357,75 @@ img.u-pull-left {
 body.subpage .s-header {
     margin-top: 10px; /* Adds space only for subpages */
 }
+
+/* ----------Subpage Header Styling --------------/
+.subpage-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color-body);
+    z-index: 100;
+    box-shadow: var(--box-shadow);
+}
+
+.subpage-nav-wrap {
+    display: flex;
+    justify-content: center; /* Center-align the navigation */
+    padding: 0.5rem 1rem;
+}
+
+.subpage-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem; /* Add spacing between links */
+    padding: 0;
+    margin: 0;
+}
+
+.subpage-nav ul li {
+    flex: 1; /* Let links stretch equally */
+    text-align: center;
+}
+
+.subpage-nav ul li a {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.subpage-nav ul li a:hover {
+    background-color: var(--color-1);
+    color: white;
+}
+
+/* Responsive Styling for Subpage Navbar */
+@media screen and (max-width: 800px) {
+    .subpage-nav-wrap {
+        flex-direction: column; /* Stack the links vertically */
+        align-items: center; /* Center-align stacked links */
+        padding: 1rem 0;
+    }
+
+    .subpage-nav ul {
+        flex-direction: column; /* Vertical list */
+        gap: 0.5rem;
+    }
+
+    .subpage-nav ul li {
+        width: 100%; /* Full width links */
+    }
+
+    .subpage-nav ul li a {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}
     
 
 
