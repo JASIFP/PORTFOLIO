@@ -4355,7 +4355,7 @@ img.u-pull-left {
 }
 /*--------GAP FOR SUB PAGE TOP------------------*/
 body.subpage .s-header {
-    margin-top: 4px; /* Adds space only for subpages */
+    margin-top: 10px; /* Adds space only for subpages */
 }
     
 
