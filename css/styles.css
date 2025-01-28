@@ -4426,23 +4426,34 @@ img.u-pull-left {
 }
 /*--------- SEE MORE BUTTON -------/*
 /* Example if the button is inside a container with a specific class */
-.container-class .see-more-button {
-  display: block;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 15px 30px;
-  background-color: var(--color-gray-9);
-  color: var(--color-1);
-  text-align: center;
-  font-size: 16px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+/* Style for the 'See more' button */
+.see-more-button {
+  display: block; /* Makes the link block-level, allowing it to stretch */
+  width: 100%; /* Ensures the button takes up 100% of the screen width */
+  background-color: var(--color-gray-9); /* Dark grey background */
+  color: white; /* White text */
+  text-align: center; /* Centers the text */
+  padding: 20px; /* Adds vertical padding */
+  font-size: 18px; /* Adjust font size */
+  font-weight: bold; /* Makes the text bold */
+  text-decoration: none; /* Removes underline */
+  border: none; /* Removes any borders */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  border-radius: 5px; /* Optional: adds rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
-.container-class .see-more-button:hover {
-  background-color: var(--color-1);
-  color: var(--color-gray-9);
+/* Hover effect for the button */
+.see-more-button:hover {
+  background-color: var(--color-1); /* Changes background on hover */
+  color: var(--color-gray-9); /* Changes text color on hover */
+}
+
+/* Responsive design for small screens (optional: adjust padding or font size) */
+@media (max-width: 768px) {
+  .see-more-button {
+    padding: 15px; /* Reduce padding for smaller screens */
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
 }
 
