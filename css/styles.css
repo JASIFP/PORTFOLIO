@@ -4424,5 +4424,25 @@ img.u-pull-left {
         font-size: 13px; /* Adjust font size even more for smaller screens */
     }
 }
+/*--------- SEE MORE BUTTON -------/*
+/* Example if the button is inside a container with a specific class */
+.container-class .see-more-button {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  background-color: var(--color-gray-9);
+  color: var(--color-1);
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
 
+.container-class .see-more-button:hover {
+  background-color: var(--color-1);
+  color: var(--color-gray-9);
+}
 
