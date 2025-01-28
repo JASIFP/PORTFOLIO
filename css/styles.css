@@ -4357,6 +4357,7 @@ img.u-pull-left {
 /* Subpage Header Styling */
 
     
+/* Subpage Header Styling */
 .subpage-header {
     width: 100%;
     position: fixed;
@@ -4372,6 +4373,7 @@ img.u-pull-left {
     display: flex;
     justify-content: center; /* Center the navigation */
     padding: 0.5rem 1rem;
+    width: 100%;
 }
 
 /* Navigation List */
@@ -4407,26 +4409,33 @@ img.u-pull-left {
     color: white;
 }
 
-/* Responsive Styling for Subpage Navbar */
+/* Mobile Styling */
 @media screen and (max-width: 800px) {
+    /* Make sure navbar is not oversized on mobile */
     .subpage-nav-wrap {
         flex-direction: column; /* Stack links vertically */
         align-items: center; /* Center-align stacked links */
         padding: 1rem 0;
+        width: 100%; /* Ensure it takes full width */
+        position: relative;
     }
 
     .subpage-nav ul {
         flex-direction: column; /* Vertical list */
         gap: 0.5rem;
+        width: 100%; /* Ensure each link takes full width */
+        text-align: center;
     }
 
     .subpage-nav ul li {
-        width: 100%; /* Full-width links */
+        width: 100%; /* Full width items */
     }
 
     .subpage-nav ul li a {
         font-size: 0.9rem;
         padding: 0.8rem;
+        display: block;
+        width: 100%; /* Ensure links are block-level and occupy full width */
     }
 }
 
