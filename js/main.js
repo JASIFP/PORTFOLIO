@@ -358,8 +358,27 @@
         triggers.forEach(function(trigger) {
             moveTo.registerTrigger(trigger);
         });
+    document.querySelectorAll('.smoothscroll').forEach(link => {
+        link.addEventListener('click', function(event) {
+            const href = this.getAttribute('href');
 
-    }; // end ssMoveTo
+            // If it's an internal anchor link (starts with "#")
+            if (href.startsWith('#')) {
+                event.preventDefault(); // Prevent default only for hash links
+                const section = document.querySelector(href);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the section
+            } else {
+                console.error(`Section with ID "${href}" not found.`);
+            }
+        } else {
+            // External links or page navigation
+            window.location.href = href; // Allow navigation to external links
+        }
+    });
+});
+
+}; // end ssMoveTo
 
 
    /* Initialize
