@@ -4429,15 +4429,15 @@ img.u-pull-left {
 /* Style for the 'See more' button */
 /* Centering the button horizontally and setting it full width */
 /* Centering container for the 'See more' button */
+/* Container for the 'See more' button */
 .contact-block {
-  display: flex;
-  justify-content: center; /* Center the button horizontally */
-  align-items: center; /* Vertically centers the button if needed */
-  height: 100vh; /* Makes sure the container takes up full screen height */
+  text-align: center; /* Ensures the button's text is centered */
+  width: 100%; /* Ensure the container spans the full width */
 }
 
 /* Style for the 'See more' button */
 .see-more-button {
+  display: inline-block; /* Makes the button inline so it takes only as much width as it needs */
   background-color: var(--color-gray-9); /* Dark grey background */
   color: white; /* White text */
   text-align: center; /* Centers the text inside */
@@ -4447,8 +4447,6 @@ img.u-pull-left {
   text-decoration: none; /* Removes underline */
   border: none; /* Removes borders */
   border-radius: 5px; /* Optional: adds rounded corners */
-  width: 100%; /* Ensures button spans the full width */
-  max-width: 600px; /* Limits the max width of the button */
   transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
