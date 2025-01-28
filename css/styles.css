@@ -4354,11 +4354,9 @@ img.u-pull-left {
     border: 0; /* Removes any default border */
 }
 /*--------GAP FOR SUB PAGE TOP------------------*/
-body.subpage .s-header {
-    margin-top: 10px; /* Adds space only for subpages */
-}
+/* Subpage Header Styling */
 
-/* ----------Subpage Header Styling --------------/
+    
 .subpage-header {
     width: 100%;
     position: fixed;
@@ -4369,25 +4367,29 @@ body.subpage .s-header {
     box-shadow: var(--box-shadow);
 }
 
+/* Navigation Wrapper */
 .subpage-nav-wrap {
     display: flex;
-    justify-content: center; /* Center-align the navigation */
+    justify-content: center; /* Center the navigation */
     padding: 0.5rem 1rem;
 }
 
+/* Navigation List */
 .subpage-nav ul {
     list-style: none;
     display: flex;
-    gap: 1rem; /* Add spacing between links */
+    gap: 1rem; /* Space between links */
     padding: 0;
     margin: 0;
+    flex-wrap: wrap; /* Allow items to wrap on small screens */
 }
 
+/* Navigation List Items */
 .subpage-nav ul li {
-    flex: 1; /* Let links stretch equally */
     text-align: center;
 }
 
+/* Navigation Links */
 .subpage-nav ul li a {
     font-size: 1rem;
     font-weight: 400;
@@ -4399,6 +4401,7 @@ body.subpage .s-header {
     transition: background-color 0.3s ease;
 }
 
+/* Hover Effect */
 .subpage-nav ul li a:hover {
     background-color: var(--color-1);
     color: white;
@@ -4407,7 +4410,7 @@ body.subpage .s-header {
 /* Responsive Styling for Subpage Navbar */
 @media screen and (max-width: 800px) {
     .subpage-nav-wrap {
-        flex-direction: column; /* Stack the links vertically */
+        flex-direction: column; /* Stack links vertically */
         align-items: center; /* Center-align stacked links */
         padding: 1rem 0;
     }
@@ -4418,7 +4421,7 @@ body.subpage .s-header {
     }
 
     .subpage-nav ul li {
-        width: 100%; /* Full width links */
+        width: 100%; /* Full-width links */
     }
 
     .subpage-nav ul li a {
@@ -4426,6 +4429,6 @@ body.subpage .s-header {
         padding: 0.8rem;
     }
 }
-    
+
 
 
