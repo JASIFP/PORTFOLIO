@@ -4353,5 +4353,10 @@ img.u-pull-left {
     padding: 0; /* Removes default padding */
     border: 0; /* Removes any default border */
 }
+/*--------GAP FOR SUB PAGE TOP------------------*/
+body.subpage .s-header {
+    margin-top: 4px; /* Adds space only for subpages */
+}
+    
 
 
