@@ -4353,91 +4353,153 @@ img.u-pull-left {
     padding: 0; /* Removes default padding */
     border: 0; /* Removes any default border */
 }
-/*--------GAP FOR SUB PAGE TOP------------------*/
-/* Subpage Header Styling */
+/* ===================================================================
+ * # SUBPAGE HEADER
+ *
+ * ------------------------------------------------------------------- */
 
-    
-/* Subpage Header Styling */
+/* Subpage Header */
 .subpage-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: var(--color-body);
-    z-index: 100;
-    box-shadow: var(--box-shadow);
+    --box-shadow : 0 1px 1px rgba(0, 0, 0, 0.06), 0 2px 2px rgba(0, 0, 0, 0.06), 0 4px 4px rgba(0, 0, 0, 0.06), 0 8px 8px rgba(0, 0, 0, 0.06);
+    z-index      : 100;
+    width        : 100%;
+    position     : fixed;
+    top          : 0;
+    left         : 0;
+    background-color : var(--color-body);
 }
 
-/* Navigation Wrapper */
+/* Subpage Navigation */
 .subpage-nav-wrap {
     display: flex;
-    justify-content: center; /* Center the navigation */
-    padding: 0.5rem 1rem;
+    justify-content: center;
     width: 100%;
-}
-
-/* Navigation List */
-.subpage-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem; /* Space between links */
-    padding: 0;
-    margin: 0;
-    flex-wrap: wrap; /* Allow items to wrap on small screens */
-}
-
-/* Navigation List Items */
-.subpage-nav ul li {
-    text-align: center;
-}
-
-/* Navigation Links */
-.subpage-nav ul li a {
-    font-size: 1rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: white;
     padding: 0.5rem 1rem;
-    display: block;
-    transition: background-color 0.3s ease;
 }
 
-/* Hover Effect */
-.subpage-nav ul li a:hover {
-    background-color: var(--color-1);
-    color: white;
+/* Main navigation for subpage */
+.subpage-nav ul {
+    list-style       : none;
+    display          : flex;
+    flex-flow        : row nowrap;
+    margin           : 0;
+    padding          : 0;
+    background-color : var(--color-body);
+    border-width     : 1px;
+    border-color     : var(--color-border);
+    border-style     : none solid solid solid;
 }
 
-/* Mobile Styling */
-@media screen and (max-width: 800px) {
-    /* Make sure navbar is not oversized on mobile */
+.subpage-nav li {
+    flex         : 1 1 0%;
+    padding-left : 0;
+    border-right : 1px solid var(--color-border);
+}
+
+.subpage-nav li:last-child {
+    border-right : none;
+}
+
+/* Subpage Navigation Links */
+.subpage-nav a {
+    display             : block;
+    font-size           : 10px;
+    font-weight         : 400;
+    line-height         : var(--header-height);
+    text-transform      : uppercase;
+    letter-spacing      : .35em;
+    color               : white;
+    transition-property : color, background-color;
+}
+
+.subpage-nav a:focus,
+.subpage-nav a:hover {
+    color : var(--color-1);
+}
+
+/* Mobile-specific Styles for Subpage Header */
+@media screen and (max-width: 1000px) {
     .subpage-nav-wrap {
-        flex-direction: column; /* Stack links vertically */
-        align-items: center; /* Center-align stacked links */
-        padding: 1rem 0;
-        width: 100%; /* Ensure it takes full width */
-        position: relative;
+        width : 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .subpage-header {
+        height : var(--header-height);
+    }
+
+    .subpage-nav-wrap {
+        display: block;
+        transform        : scaleY(0);
+        transform-origin : center top;
+        background-color : var(--color-body);
+        border-bottom    : 1px solid var(--color-border);
+        box-shadow       : var(--box-shadow);
+    }
+
+    .subpage-nav {
+        padding    : var(--vspace-1) 0 var(--vspace-1_5);
+        transform  : translateY(-2rem);
+        opacity    : 0;
+        visibility : hidden;
+    }
+
+    .subpage-nav a {
+        font-family    : var(--font-2);
+        font-size      : var(--text-md);
+        font-weight    : 400;
+        line-height    : var(--vspace-0_875);
+        text-transform : none;
+        letter-spacing : 0;
+        padding        : var(--vspace-0_5) 2.8rem;
+        color          : var(--color-text);
+    }
+
+    .subpage-nav a:focus,
+    .subpage-nav a:hover {
+        color : white;
+    }
+
+    .subpage-nav .current a {
+        background-color : transparent;
+        color            : var(--color-1);
     }
 
     .subpage-nav ul {
-        flex-direction: column; /* Vertical list */
-        gap: 0.5rem;
-        width: 100%; /* Ensure each link takes full width */
-        text-align: center;
+        display          : block;
+        background-color : transparent;
+        text-align       : left;
+        margin           : 0;
+        border           : none;
     }
 
     .subpage-nav ul li {
-        width: 100%; /* Full width items */
+        display : block;
+        border  : none;
     }
 
-    .subpage-nav ul li a {
-        font-size: 0.9rem;
-        padding: 0.8rem;
-        display: block;
-        width: 100%; /* Ensure links are block-level and occupy full width */
+    .subpage-nav ul li:first-child {
+        display : none;
+    }
+
+    .menu-is-open .subpage-header {
+        height : auto;
+    }
+
+    .menu-is-open .subpage-nav-wrap {
+        transform        : scaleY(1);
+        transition       : transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition-delay : 0s;
+    }
+
+    .menu-is-open .subpage-nav {
+        transform        : translateY(0);
+        opacity          : 1;
+        visibility       : visible;
+        transition       : all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition-delay : .4s;
     }
 }
-
 
 
