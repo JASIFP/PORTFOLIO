@@ -4427,33 +4427,36 @@ img.u-pull-left {
 /*--------- SEE MORE BUTTON -------/*
 /* Example if the button is inside a container with a specific class */
 /* Style for the 'See more' button */
+/* Centering the button horizontally and setting it full width */
 .see-more-button {
-  display: block; /* Makes the link block-level, allowing it to stretch */
-  width: 100%; /* Ensures the button takes up 100% of the screen width */
+  display: block; /* Makes the link block-level to allow centering */
+  width: 100%; /* Ensures button spans the full width */
+  max-width: 1000px; /* Optional: You can limit the max width of the button */
   background-color: var(--color-gray-9); /* Dark grey background */
-  color: white; /* White text */
-  text-align: center; /* Centers the text */
-  padding: 20px; /* Adds vertical padding */
+  color: white; /* White text color */
+  text-align: center; /* Centers the text inside */
+  padding: 20px; /* Adds vertical padding to the button */
   font-size: 18px; /* Adjust font size */
   font-weight: bold; /* Makes the text bold */
   text-decoration: none; /* Removes underline */
   border: none; /* Removes any borders */
-  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  box-sizing: border-box; /* Ensures padding doesn't mess with width */
   border-radius: 5px; /* Optional: adds rounded corners */
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  transition: background-color 0.3s ease; /* Adds smooth hover effect */
+  margin: 0 auto; /* Ensures it's centered horizontally */
 }
 
-/* Hover effect for the button */
+/* Hover effect */
 .see-more-button:hover {
-  background-color: var(--color-1); /* Changes background on hover */
+  background-color: var(--color-1); /* Changes background color on hover */
   color: var(--color-gray-9); /* Changes text color on hover */
 }
 
-/* Responsive design for small screens (optional: adjust padding or font size) */
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .see-more-button {
-    padding: 15px; /* Reduce padding for smaller screens */
-    font-size: 16px; /* Adjust font size for smaller screens */
+    padding: 15px; /* Reduces padding for smaller screens */
+    font-size: 16px; /* Reduces font size for smaller screens */
   }
 }
 
