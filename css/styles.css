@@ -2696,11 +2696,20 @@ img.u-pull-left {
 }
 
 .text-huge-title {
+    font-size: 4.2rem !important;
+    line-height: 1.3;
+    margin-top: 0;
+    margin-bottom: var(--vspace-1);
+    word-break: break-word;
+}
+
+
+/*.--.text-huge-title {
     --text-huge : 10.8rem;
     font-size   : var(--text-huge);
     line-height : 1.0740;
     margin-top  : 0;
-}
+./}
 
 /* ------------------------------------------------------------------- 
  * ## MailtoUI style overrides
@@ -3287,13 +3296,13 @@ img.u-pull-left {
  * ------------------------------------------------------------------- */
 @media screen and (max-width: 1600px) {
     .s-intro {
-        --text-huge-multiplier : .92;
+        --text-huge-multiplier : 1.1;
     }
 }
 
 @media screen and (max-width: 1200px) {
     .s-intro {
-        --text-huge-multiplier : .85;
+        --text-huge-multiplier : 1;
     }
 
     .intro-social {
@@ -3307,7 +3316,7 @@ img.u-pull-left {
 
 @media screen and (max-width: 1000px) {
     .s-intro {
-        --text-huge-multiplier : .8;
+        --text-huge-multiplier : .95;
     }
 
     .intro-content {
@@ -3317,7 +3326,7 @@ img.u-pull-left {
 
 @media screen and (max-width: 900px) {
     .s-intro {
-        --text-huge-multiplier : .75;
+        --text-huge-multiplier : .90;
     }
 
     .intro-content .text-huge-title br {
@@ -3328,7 +3337,7 @@ img.u-pull-left {
 @media screen and (max-width: 800px) {
     .s-intro {
         --gutter               : 4rem;
-        --text-huge-multiplier : .7;
+        --text-huge-multiplier : .80;
     }
 
     .intro-content {
@@ -3360,7 +3369,7 @@ img.u-pull-left {
 @media screen and (max-width: 600px) {
     .s-intro {
         --gutter               : 2rem;
-        --text-huge-multiplier : .58;
+        --text-huge-multiplier : .75;
     }
 
     .intro-scrolldown {
@@ -3370,7 +3379,7 @@ img.u-pull-left {
 
 @media screen and (max-width: 500px) {
     .s-intro {
-        --text-huge-multiplier : .55;
+        --text-huge-multiplier : .73;
     }
 
     .intro-social {
@@ -3392,6 +3401,49 @@ img.u-pull-left {
 @media screen and (max-width: 350px) {
     .intro-social {
         display : none;
+    }
+}
+
+/*------------------------------new-------------------------------------*/
+
+.text-huge-title {
+    --text-huge : 10.8rem;
+    font-size   : var(--text-huge);
+    line-height : 1.0740;
+    margin-top  : 0;
+}
+.text-huge-title {
+    font-size: 4.2rem;
+    line-height: 1.2;
+    margin-top: 0;
+}
+@media screen and (max-width: 1200px) {
+    .text-huge-title {
+        font-size: 3.6rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .text-huge-title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .text-huge-title {
+        font-size: 2.6rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .text-huge-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .text-huge-title {
+        font-size: 1.9rem;
     }
 }
 
