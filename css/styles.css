@@ -4515,4 +4515,9 @@ img.u-pull-left {
     font-size: 16px; /* Reduces font size for smaller screens */
   }
 }
+#works + #testimonials.s-works {
+    padding-top: 4rem !important;  /* Not 0, but less than 8rem */
+    margin-top: 0 !important;
+}
+
 
